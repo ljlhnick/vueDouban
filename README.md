@@ -57,7 +57,14 @@ describe('My First Test', () => {
   })
 })
 ```
-截图
+### this project showCase
+![index.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/index.png)
+![movie.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/movie.png])
+![movieDetail.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/movieDetail.png)
+![book.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/book.png)
+![bookDetail.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/bookDetail.png)
+![page.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/page.png)
+
 
 ```
 question: 1.refresh the menu not correctly active
