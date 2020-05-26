@@ -72,7 +72,7 @@ describe('My First Test', () => {
 ![book.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/book.png)
 ![bookDetail.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/bookDetail.png)
 ![page.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/page.png)
-
+![coverage.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/coverage.png)
 
 ```
 question: 1.单元测试
