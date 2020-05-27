@@ -1,18 +1,27 @@
 # vue-douban
 
-### UI 
-```
-iview
-https://www.iviewui.com/components/button
-```
-
+### vue + vue-router + vuex + iview  + Jest
 use Menu in App.vue
 use Carousel Divider Drawer Timeline in Index.Vue
 use Button ButtonGroup Page Spin in Movie.vue/Book.vue
 
-vue router + vuex + webpack
+## Project setup
+```
+npm install
+npm run build
+npm run test
+npm run lint
+npm run test:e2e
+npm run test:unit
+```
 
-unit测试Index.vue组件
+### vue UI
+```
+vue ui
+```
+
+
+### unit测试Index.vue组件
 ```
 import { expect } from 'chai'
 import Vue from "vue"
@@ -45,9 +54,8 @@ describe('Index.vue', () => {
     expect(vm.$el.carsouleList).length == 5;
   });
 ```
-截图
 
-E2E测试
+### E2E测试
 ```
 // https://docs.cypress.io/api/introduction/api.html
 
@@ -57,60 +65,24 @@ describe('My First Test', () => {
   })
 })
 ```
-截图
+### this project showCase
+![index.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/index.png)
+![movie.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/movie.png])
+![movieDetail.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/movieDetail.png)
+![book.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/book.png)
+![bookDetail.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/bookDetail.png)
+![page.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/page.png)
+![coverage.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/coverage.png)
 
 ```
-question: 1.refresh the menu not correctly active
-2. 单元测试
-3. bookdetail
+question: 1.单元测试
 ```
-
 
 
 ### API
 ```
 douba api  must has apikey=0b2bdeda43b5688921839c8ecb20399b
 the document is here:  https://douban-api-docs.zce.me/
-```
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### vue UI
-```
-vue ui
 ```
 
 ### Customize configuration
