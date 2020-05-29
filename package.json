@@ -10,7 +10,7 @@
     "unit": "jest --config tests/unit/jest.conf.js --coverage"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "iview": "^3.2.2",
     "node-fetch": "^2.6.0",
     "register-service-worker": "^1.5.2",
