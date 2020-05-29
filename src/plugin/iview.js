@@ -5,5 +5,3 @@ Vue.component("Button",Button);
 Vue.component("Carousel",Carousel);
 Vue.component("Divider",Divider);
 Vue.component("Timeline",Timeline);
-Vue.component("Row",Row);
-Vue.component("Drawer",Drawer);
