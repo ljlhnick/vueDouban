@@ -1,5 +1,16 @@
 module.exports = {
   presets: [
-    '@vue/app'
+      [
+          "@babel/preset-env",
+          {
+              targets: {
+                  node: "current"
+              }
+          }
+      ]
+  ],
+  plugins: [
+    "transform-es2015-modules-commonjs",
+    "@babel/plugin-syntax-dynamic-import"
   ]
-}
+};

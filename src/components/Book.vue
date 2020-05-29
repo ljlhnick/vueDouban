@@ -20,12 +20,13 @@
                 <Page :current="start" :total="bookTotalCount" show-sizer show-total @on-change="changePageList"/>
             </TabPane>
         </Tabs>
+        <BackTop></BackTop>
         <Spin size="large" fix v-if="spinShow"></Spin>
     </div>
 </template>
 <script>
     import axios from "axios";
-    
+    import {Tabs, TabPane, Page, BackTop, Spin} from 'iview';
     import {mapGetters,mapState,mapActions} from "vuex";
     export default {
         name: "Book",
@@ -47,6 +48,9 @@
         },
         created(){
             this.getRequestData();
+        },
+        components:{
+            Tabs, TabPane, Page, BackTop, Spin
         },
         methods:{
             ...mapActions('book',[

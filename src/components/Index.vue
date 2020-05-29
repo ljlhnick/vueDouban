@@ -8,15 +8,16 @@
             </CarouselItem>
         </Carousel>
 
-        <Divider style="color: #fff">With Text</Divider>
+        <Divider style="color: #fff">Production length {{products.length}}</Divider>
 
         <Row>
             <Col span="4">
                 <Button @click="value1 = true" type="primary">Open</Button>
                 <Drawer title="Basic Drawer" :closable="false" v-model="value1">
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
+                    <div class="content">
+                        <p v-for="(item, index) in products" :key="index">{{item.name}} Prices: {{item.price}}</p>
+                        <Button type="primary" @click="minuPrices()">lower price</Button>
+                    </div>
                 </Drawer>
             </Col>
             <Col span="20">
@@ -35,18 +36,18 @@
     import axios from "axios";
     import "../mock/index";
     import {mapState,mapMutations,mapActions} from 'vuex';
+    import { Carousel, CarouselItem, Timeline, TimelineItem, Row, Col, Divider} from 'iview'
     export default {
         data(){
             return{
                 carouseIndex: 0,
                 value1: false,
-                userList: [],
                 carsouleList: [
-                    {src:require("../assets/1.jpg"),name:"1"},
-                    {src:require("../assets/2.jpg"),name:"2"},
-                    {src:require("../assets/3.jpg"),name:"3"},
-                    {src:require("../assets/4.jpg"),name:"4"},
-                    {src:require("../assets/5.jpg"),name:"5"}
+                    {src:import("../assets/1.jpg"),name:"1"},
+                    {src:import("../assets/2.jpg"),name:"2"},
+                    {src:import("../assets/3.jpg"),name:"3"},
+                    {src:import("../assets/4.jpg"),name:"4"},
+                    {src:import("../assets/5.jpg"),name:"5"}
                 ],
                 timeList: [
                     {date:"2015-9-13",content:"大一开学"},
@@ -67,7 +68,10 @@
             // })
         },
         created() {
-            this.getMockData();
+
+        },
+        components:{
+            Carousel, CarouselItem, Timeline, TimelineItem, Row, Col, Divider
         },
         methods:{
             ...mapMutations('index',[
@@ -76,20 +80,13 @@
             ...mapActions('index',[
                 'minuPriceAsync'
             ]),
+             //this.$store.commit('minuPrice',2);
             minuPrices(){
-                this.minuPrice(2); //this.$store.commit('minuPrice',2);
+                this.minuPrice(2);
             },
+            //this.$store.dispatch('minuPriceAsync',5);
             minuPricesAsync(){
-                this.minuPriceAsync(5); //this.$store.dispatch('minuPriceAsync',5);
-            },
-            getMockData(){
-                axios.get("/api/index").then((res)=>{
-                    this.userList = res.data.list;
-                });
-                // axios.get("/exp/users/user/list").then((res)=>{
-                //     window.console.log("express项目的数据"+res.data.data.list.length)
-                //     this.userList=res.data.data.list;
-                // });
+                this.minuPriceAsync(5); 
             }
         }
     }

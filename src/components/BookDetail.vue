@@ -11,7 +11,7 @@
             </a>
             {{bookDetail.catalog}}
 
-            <!-- <div class="row">
+            <div class="row">
                 <List>
                     <ListItem v-for="(item, index) in bookDetail.tags" :key="index">
                         <Tag checkable color="error">{{item.title}}</Tag>
@@ -19,7 +19,7 @@
                         <hr/>
                     </ListItem>
                 </List>
-            </div> -->
+            </div>
         </Card>
 
         <Modal
@@ -33,7 +33,8 @@
 </template>
 
 <script>
-    import axois from "axios"
+    import axois from "axios";
+    import {List, ListItem, Card, Icon} from 'iview';
     export default {
         name: "BookDetail",
         data() {
@@ -47,6 +48,9 @@
             axois.get(`/ban/v2/book/${this.$route.params.id}?apikey=0b2bdeda43b5688921839c8ecb20399b`).then((res)=>{
                 self.bookDetail = res.data;
             })
+        },
+        components:{
+            List, ListItem, Card, Icon
         }
     }
 </script>

@@ -5,7 +5,7 @@ Vue.use(Vuex);
 import book from "./book";
 import movie from "./movie"
 
-const moduleA={
+export const moduleA = {
     namespaced: true,
     state:{
         products:[
@@ -48,9 +48,9 @@ const moduleA={
 
 const store = new Vuex.Store({
     modules:{
-        index:moduleA,
-        book:book,
-        movie:movie
+        index: moduleA,
+        book: book,
+        movie: movie
     }
 });
 

@@ -19,7 +19,7 @@
                                         <Button type="info" ghost v-for="(genre,index) in item.genres" :key="index">{{genre}}</Button>
                                     </ButtonGroup>
                                 </p>
-                                <Button  type="primary" @click="toDetail(item.subject ? item.subject.id :item.id)">Go</Button>
+                                <Button type="primary" class="goto" @click="toDetail(item.subject ? item.subject.id :item.id)">Go {{item.subject ? item.subject.id :item.id}}</Button>
                             </div>
                         </div>
                     </div>
@@ -27,11 +27,14 @@
                 <Page :current="start" :total="movieTotalCount" show-sizer show-total @on-change="changePageList"/>
             </TabPane>
         </Tabs>
+        <BackTop></BackTop>
         <Spin size="large" fix v-if="spinShow"></Spin>
     </div>
 </template>
 <script>
-    import {mapActions} from "vuex"
+    import {mapActions} from "vuex";
+    import axios from 'axios';
+    import {Tabs, TabPane, Page, BackTop, Spin, ButtonGroup, Button, Divider} from 'iview';
     import "../mock/city";
     export default ({
         name: "movie",
@@ -51,13 +54,16 @@
         mounted(){
             this.getRequestMovieData()
         },
+        components:{
+            Tabs, TabPane , Page, BackTop, Spin, ButtonGroup, Button, Divider
+        },
         methods:{
             ...mapActions('movie',[
                 'newMovieLists'
             ]),
             getRequestMovieData(){
                 let self = this;
-                this.$http.get(`${this.baseUrl}?start=${(this.start-1)*self.count}&count=${this.count}&apikey=0b2bdeda43b5688921839c8ecb20399b`).then((res)=>{
+                axios.get(`${this.baseUrl}?start=${(this.start-1)*self.count}&count=${this.count}&apikey=0b2bdeda43b5688921839c8ecb20399b`).then((res)=>{
                     self.movieTabTitle = res.data.title;
                     self.movieTotalCount = res.data.total ? res.data.total : res.data.subjects.length;
                     self.movieLists = res.data.total ? res.data.subjects: res.data.subjects.slice((self.start-1)*self.count, self.start*self.count);

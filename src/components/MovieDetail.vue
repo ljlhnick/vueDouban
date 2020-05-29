@@ -44,7 +44,8 @@
 </template>
 
 <script>
-    import axois from "axios"
+    import axois from "axios";
+    import {ButtonGroup, Button, Carousel, CarouselItem} from 'iview';
     export default {
         name: "MovieDetail",
         data(){
@@ -60,11 +61,22 @@
                 detailItem:{}
             }
         },
+        beforeRouteEnter(to, from, next){
+            console.log('beforeRouteEnter', to.params, this);
+            next();
+        },
+        beforeRouteUpdate(to, from, next){
+            console.log('beforeRouteUpdate', to.params, this);
+            next();
+        },
         created() {
             let self=this;
             axois.get(`/ban/v2/movie/subject/${this.$route.params.id}?apikey=0b2bdeda43b5688921839c8ecb20399b`).then((res)=>{
                 self.detailItem = res.data;
             })
+        },
+        components:{
+            ButtonGroup, Button, Carousel, CarouselItem
         }
     }
 </script>
