@@ -258,7 +258,7 @@ describe('Book component', () => {
 
 ### this project showCase
 ![index.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/index.png)
-![movie.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/movie.png])
+![movie.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/movie.png)
 ![movieDetail.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/movieDetail.png)
 ![book.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/book.png)
 ![bookDetail.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/bookDetail.png)
