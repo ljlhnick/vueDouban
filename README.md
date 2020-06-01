@@ -257,13 +257,13 @@ describe('Book component', () => {
 ```
 
 ### this project showCase
-![index.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/index.png)
-![movie.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/movie.png])
-![movieDetail.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/movieDetail.png)
-![book.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/book.png)
-![bookDetail.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/bookDetail.png)
-![page.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/page.png)
-![coverage.png](https://github.com/ljlhnick/vueDouban/tree/dev/public/showCase/coverage.png)
+![index.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/index.png)
+![movie.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/movie.png])
+![movieDetail.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/movieDetail.png)
+![book.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/book.png)
+![bookDetail.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/bookDetail.png)
+![page.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/page.png)
+![coverage.png](https://github.com/ljlhnick/vue-wangyiyun/blob/master/public/showCase/douban/coverage.png)
 
 
 ### API
